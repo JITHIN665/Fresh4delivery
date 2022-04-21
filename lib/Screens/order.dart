@@ -22,23 +22,21 @@ class Order extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-        debugShowCheckedModeBanner: false,
-        home: Scaffold(
-            body: Padding(
-          padding: const EdgeInsets.all(20.0),
-          child: Container(
-            width: double.infinity,
-            child: ListView.builder(
-                itemCount: 5,
-                itemBuilder: (context, index) {
-                  return ord(
-                      image: order[index].image,
-                      text: order[index].name,
-                      name1: order[index].name1);
-                }),
-          ),
-        )));
+    return Scaffold(
+        body: Padding(
+      padding: EdgeInsets.only(left: 20, right: 20),
+      child: Container(
+        width: double.infinity,
+        child: ListView.builder(
+            itemCount: 5,
+            itemBuilder: (context, index) {
+              return ord(
+                  image: order[index].image,
+                  text: order[index].name,
+                  name1: order[index].name1);
+            }),
+      ),
+    ));
   }
 }
 
@@ -51,48 +49,47 @@ class ord extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: EdgeInsets.symmetric(horizontal: 5, vertical: 5),
-      child: Container(
-        decoration: BoxDecoration(
-          color: Colors.grey.shade200,
-          borderRadius: BorderRadius.circular(15),
-        ),
-        width: double.infinity,
-        child: Padding(
-          padding: EdgeInsets.all(5),
-          child: Row(
-            children: [
-              ClipRRect(
-                borderRadius: BorderRadius.circular(20),
-                child: Image.asset(
-                  image!,
-                  width: 70,
-                  height: 70,
-                  fit: BoxFit.cover,
-                ),
-              ),
-              SizedBox(
-                width: 50,
-              ),
-              Column(
-                // mainAxisAlignment: MainAxisAlignment.end,
-                children: [
-                  Text(text!, style: TextStyle(fontSize: 20)),
-                  Text(name1!),
-                  Row(
-                    children: [
-                      Icon(
-                        Icons.star,
-                        size: 10,
-                      ),
-                    ],
-                  ),
-                ],
-              ),
-            ],
+        padding: EdgeInsets.symmetric(horizontal: 5, vertical: 5),
+        child: Container(
+          decoration: BoxDecoration(
+            color: Colors.grey.shade200,
+            borderRadius: BorderRadius.circular(15),
           ),
-        ),
-      ),
-    );
+          width: double.infinity,
+          child: Padding(
+            padding: EdgeInsets.all(5),
+            child: Row(
+              children: [
+                ClipRRect(
+                  borderRadius: BorderRadius.circular(20),
+                  child: Image.asset(
+                    image!,
+                    width: 70,
+                    height: 70,
+                    fit: BoxFit.cover,
+                  ),
+                ),
+                SizedBox(
+                  width: 50,
+                ),
+                Column(
+                  // mainAxisAlignment: MainAxisAlignment.end,
+                  children: [
+                    Text(text!, style: TextStyle(fontSize: 20)),
+                    Text(name1!),
+                    Row(
+                      children: [
+                        Icon(
+                          Icons.star,
+                          size: 10,
+                        ),
+                      ],
+                    ),
+                  ],
+                ),
+              ],
+            ),
+          ),
+        ));
   }
 }
