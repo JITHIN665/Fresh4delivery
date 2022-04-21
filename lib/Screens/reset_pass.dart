@@ -148,7 +148,8 @@ class Reset extends StatelessWidget {
                           borderRadius: BorderRadius.circular(15),
                         )),
                         backgroundColor: MaterialStateProperty.all(
-                            Color.fromRGBO(201, 228, 125, 1))),
+                          Color.fromARGB(255, 166, 206, 57),
+                        )),
                     onPressed: () {
                       Navigator.push(
                         context,

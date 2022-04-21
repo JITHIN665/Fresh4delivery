@@ -25,10 +25,21 @@ class _ScreenSplashState extends State<ScreenSplash> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color.fromRGBO(201, 228, 125, 1),
+      backgroundColor: Color.fromARGB(255, 166, 206, 57),
       body: Center(
+        // decoration: BoxDecoration(
+        //   gradient: LinearGradient(
+        //     begin: Alignment.topRight,
+        //     end: Alignment.bottomLeft,
+        //     colors: [
+        //       Color.fromARGB(255, 72, 170, 152),
+        //       Color.fromARGB(255, 166, 206, 57),
+        //     ],
+        //   ),
+        // ),
         child: Image.asset(
           "assets/images/icon1.png",
+          color: Colors.black,
           width: 180,
           fit: BoxFit.fill,
         ),

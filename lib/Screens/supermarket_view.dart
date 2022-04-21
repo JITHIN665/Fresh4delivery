@@ -48,8 +48,8 @@ class SuperMarketView extends StatelessWidget {
               children: [
                 Image.asset(
                   "assets/images/q5.jpg",
-                  height: 205,
-                  // width: MediaQuery.of(context).size.width,
+                  // height: 205,
+                  width: MediaQuery.of(context).size.width,
                 ),
                 Positioned(
                   bottom: 0,

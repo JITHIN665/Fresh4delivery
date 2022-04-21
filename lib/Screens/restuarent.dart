@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:fresh4delivery/Screens/restuarent_view.dart';
 
 class RestaurantModel {
   String? image;
@@ -217,45 +218,51 @@ class res extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Padding(
-      padding: EdgeInsets.symmetric(horizontal: 5, vertical: 5),
-      child: Container(
-        decoration: BoxDecoration(
-          color: Colors.grey.shade200,
-          borderRadius: BorderRadius.circular(15),
-        ),
-        width: double.infinity,
-        child: Padding(
-          padding: EdgeInsets.all(5),
-          child: Row(
-            children: [
-              ClipRRect(
-                borderRadius: BorderRadius.circular(20),
-                child: Image.asset(
-                  image!,
-                  width: 70,
-                  height: 70,
-                  fit: BoxFit.cover,
+    return GestureDetector(
+      onTap: () {
+        Navigator.push(
+            context, MaterialPageRoute(builder: (context) => RestuarentView()));
+      },
+      child: Padding(
+        padding: EdgeInsets.symmetric(horizontal: 5, vertical: 5),
+        child: Container(
+          decoration: BoxDecoration(
+            color: Colors.grey.shade200,
+            borderRadius: BorderRadius.circular(15),
+          ),
+          width: double.infinity,
+          child: Padding(
+            padding: EdgeInsets.all(5),
+            child: Row(
+              children: [
+                ClipRRect(
+                  borderRadius: BorderRadius.circular(20),
+                  child: Image.asset(
+                    image!,
+                    width: 70,
+                    height: 70,
+                    fit: BoxFit.cover,
+                  ),
                 ),
-              ),
-              SizedBox(
-                width: 20,
-              ),
-              Column(
-                children: [
-                  Text(text!),
-                  Text('30 Minutes'),
-                  Row(
-                    children: [
-                      Icon(
-                        Icons.star,
-                        size: 10,
-                      ),
-                    ],
-                  )
-                ],
-              ),
-            ],
+                SizedBox(
+                  width: 20,
+                ),
+                Column(
+                  children: [
+                    Text(text!),
+                    Text('30 Minutes'),
+                    Row(
+                      children: [
+                        Icon(
+                          Icons.star,
+                          size: 10,
+                        ),
+                      ],
+                    )
+                  ],
+                ),
+              ],
+            ),
           ),
         ),
       ),

@@ -56,13 +56,14 @@ class ScreenLog extends StatelessWidget {
                   height: 50,
                   child: ElevatedButton(
                     style: ButtonStyle(
-                        shape:
-                            MaterialStateProperty.all<RoundedRectangleBorder>(
-                                RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(15),
-                        )),
-                        backgroundColor: MaterialStateProperty.all(
-                            Color.fromRGBO(201, 228, 125, 1))),
+                      shape: MaterialStateProperty.all<RoundedRectangleBorder>(
+                          RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(15),
+                      )),
+                      backgroundColor: MaterialStateProperty.all(
+                        Color.fromARGB(255, 166, 206, 57),
+                      ),
+                    ),
                     onPressed: () {
                       Navigator.push(
                         context,

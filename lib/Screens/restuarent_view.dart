@@ -40,10 +40,23 @@ class RestuarentView extends StatelessWidget {
           children: [
             Stack(
               children: [
-                Image.asset(
-                  "assets/images/r2.jpg",
-                  height: 205,
+                Container(
+                  // height: MediaQuery.of(context).size.height,
+                  height: MediaQuery.of(context).size.height * 0.25,
+                  width: MediaQuery.of(context).size.width,
+                  decoration: BoxDecoration(
+                    image: DecorationImage(
+                      image: AssetImage('assets/images/r2.jpg'),
+                      fit: BoxFit.cover,
+                    ),
+                  ),
                 ),
+                // Image.asset(
+                //   "assets/images/r2.jpg",
+                //   // height: 205,
+                //   height: MediaQuery.of(context).size.height * 0.25,
+                //   width: MediaQuery.of(context).size.width,
+                // ),
                 Positioned(
                   bottom: 0,
                   child: Container(

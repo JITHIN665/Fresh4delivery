@@ -168,16 +168,16 @@ class _HomeState extends State<Home> {
 
 class Body extends StatelessWidget {
   List images = [
-    "assets/images/Frame 2.jpg",
-    "assets/images/Frame 4.jpg",
-    "assets/images/pr.jpg",
-    "assets/images/R.jpg",
-    "assets/images/pr.jpg",
-    "assets/images/Frame 2.jpg",
-    "assets/images/Frame 4.jpg",
-    "assets/images/pr.jpg",
-    "assets/images/R.jpg",
-    "assets/images/pr.jpg",
+    "assets/images/alfaham.jpg",
+    "assets/images/f1.jpg",
+    "assets/images/f2.jpg",
+    "assets/images/f3.jpg",
+    "assets/images/f4.jpg",
+    "assets/images/f5.jpg",
+    "assets/images/f6.jpg",
+    "assets/images/v1.jpg",
+    "assets/images/v2.jpg",
+    "assets/images/v3.jpg",
     "assets/images/Frame 2.jpg",
     "assets/images/Frame 4.jpg",
     "assets/images/pr.jpg",
@@ -185,16 +185,16 @@ class Body extends StatelessWidget {
     "assets/images/pr.jpg",
   ];
   List text = [
-    'Bun',
-    'Cream',
-    'Chay',
-    'Bun',
-    'Cream',
-    'Bun',
-    'Cream',
-    'Chay',
-    'Bun',
-    'Cream',
+    'Alfaham',
+    'Donut',
+    'Karimeen',
+    'Masala Dosa',
+    'Burger',
+    'Nuggets',
+    'Chicken',
+    'carrot',
+    'radish',
+    'watermelon',
     'Bun',
     'Cream',
     'Chay',
@@ -252,16 +252,13 @@ class Body extends StatelessWidget {
             height: 5,
           ),
           SizedBox(
-            height: 106,
+            height: 100,
             child: ListView.builder(
               shrinkWrap: true,
               itemCount: 15,
               scrollDirection: Axis.horizontal,
               itemBuilder: (context, index) {
                 return buildCard(image: images[index], text: text[index]);
-                // return GestureDetector(
-                //   onTap: (() {}),
-                // );
               },
             ),
           ),
@@ -554,18 +551,44 @@ class buildCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Padding(
-      padding: const EdgeInsets.symmetric(horizontal: 4),
-      child: Column(
-        children: [
-          ClipRRect(
-              borderRadius: BorderRadius.circular(50),
-              child: Image.asset(image!,
-                  fit: BoxFit.cover, width: 90, height: 90)),
-          Text(text!)
-        ],
-      ),
-    );
+    return GestureDetector(
+        onTap: () {
+          // print('Clicked');
+          Navigator.push(
+            context,
+            MaterialPageRoute(builder: (context) => RestuarentView()),
+          );
+        },
+        child: Padding(
+          padding: EdgeInsets.only(right: 10, left: 10),
+          child: Column(
+            children: [
+              ClipRRect(
+                borderRadius: BorderRadius.circular(100),
+                child: Image.asset(
+                  image!,
+                  width: 70,
+                  height: 70,
+                  fit: BoxFit.cover,
+                ),
+              ),
+              Text(text!)
+            ],
+          ),
+        ));
+
+    // return Padding(
+    //   padding: const EdgeInsets.symmetric(horizontal: 4),
+    //   child: Column(
+    //     children: [
+    //       ClipRRect(
+    //           borderRadius: BorderRadius.circular(50),
+    //           child: Image.asset(image!,
+    //               fit: BoxFit.cover, width: 90, height: 90)),
+    //       Text(text!)
+    //     ],
+    //   ),
+    // );
   }
 }
 
