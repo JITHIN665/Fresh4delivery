@@ -332,75 +332,76 @@ class Card extends StatelessWidget {
               ),
               onPressed: () {
                 showModalBottomSheet(
-                    backgroundColor: Colors.black,
-                    context: context,
-                    shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(20)),
-                    builder: (context) => Container(
-                          height: 250,
-                          child: Column(
-                            children: [
-                              SizedBox(
-                                height: 20,
+                  backgroundColor: Colors.black,
+                  context: context,
+                  shape: RoundedRectangleBorder(
+                    borderRadius:
+                        BorderRadius.vertical(top: Radius.circular(20)),
+                  ),
+                  builder: (context) => Container(
+                    height: 250,
+                    child: Column(
+                      children: [
+                        SizedBox(
+                          height: 20,
+                        ),
+                        Text(
+                          "Select Quantity",
+                          style: TextStyle(color: Colors.white),
+                        ),
+                        SizedBox(
+                          height: 20,
+                        ),
+                        SizedBox(
+                          width: 300,
+                          child: ElevatedButton(
+                              style: ButtonStyle(
+                                backgroundColor:
+                                    MaterialStateProperty.all(Colors.grey),
+                                textStyle: MaterialStateProperty.all(
+                                  TextStyle(fontSize: 12),
+                                ),
                               ),
-                              Text(
-                                "Select Quantity",
-                                style: TextStyle(color: Colors.white),
+                              onPressed: () {
+                                Navigator.pop(context);
+                              },
+                              child: Text('Full |599')),
+                        ),
+                        SizedBox(
+                          width: 300,
+                          child: ElevatedButton(
+                              style: ButtonStyle(
+                                backgroundColor:
+                                    MaterialStateProperty.all(Colors.grey),
+                                textStyle: MaterialStateProperty.all(
+                                  TextStyle(fontSize: 12),
+                                ),
                               ),
-                              SizedBox(
-                                height: 20,
+                              onPressed: () {
+                                Navigator.pop(context);
+                              },
+                              child: Text('Half |299')),
+                        ),
+                        SizedBox(
+                          width: 300,
+                          child: ElevatedButton(
+                              style: ButtonStyle(
+                                backgroundColor:
+                                    MaterialStateProperty.all(////////
+                                        Colors.grey),
+                                textStyle: MaterialStateProperty.all(
+                                  TextStyle(fontSize: 12),
+                                ),
                               ),
-                              SizedBox(
-                                width: 300,
-                                child: ElevatedButton(
-                                    style: ButtonStyle(
-                                      backgroundColor:
-                                          MaterialStateProperty.all(
-                                              Colors.grey),
-                                      textStyle: MaterialStateProperty.all(
-                                        TextStyle(fontSize: 12),
-                                      ),
-                                    ),
-                                    onPressed: () {
-                                      Navigator.pop(context);
-                                    },
-                                    child: Text('Full |599')),
-                              ),
-                              SizedBox(
-                                width: 300,
-                                child: ElevatedButton(
-                                    style: ButtonStyle(
-                                      backgroundColor:
-                                          MaterialStateProperty.all(
-                                              Colors.grey),
-                                      textStyle: MaterialStateProperty.all(
-                                        TextStyle(fontSize: 12),
-                                      ),
-                                    ),
-                                    onPressed: () {
-                                      Navigator.pop(context);
-                                    },
-                                    child: Text('Half |299')),
-                              ),
-                              SizedBox(
-                                width: 300,
-                                child: ElevatedButton(
-                                    style: ButtonStyle(
-                                      backgroundColor:
-                                          MaterialStateProperty.all(////////
-                                              Colors.grey),
-                                      textStyle: MaterialStateProperty.all(
-                                        TextStyle(fontSize: 12),
-                                      ),
-                                    ),
-                                    onPressed: () {
-                                      Navigator.pop(context);
-                                    },
-                                    child: Text('Quarter |99')),
-                              ),
-                            ],
-                          ),
-                        ));
+                              onPressed: () {
+                                Navigator.pop(context);
+                              },
+                              child: Text('Quarter |99')),
+                        ),
+                      ],
+                    ),
+                  ),
+                );
                 // print('pressed');
                 // Navigator.push(
                 //   context,

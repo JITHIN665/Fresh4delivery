@@ -47,8 +47,9 @@ class SuperMarketView extends StatelessWidget {
             Stack(
               children: [
                 Image.asset(
-                  "assets/images/q4.jpg",
+                  "assets/images/q5.jpg",
                   height: 205,
+                  // width: MediaQuery.of(context).size.width,
                 ),
                 Positioned(
                   bottom: 0,
@@ -352,13 +353,77 @@ class Card extends StatelessWidget {
                 ),
               ),
               onPressed: () {
-                print('pressed');
-                // Navigator.push(
-                //   context,
-                //   MaterialPageRoute(
-                //     builder: (context) => Cart(),
-                //   ),
-                // );
+                showModalBottomSheet(
+                  backgroundColor: Colors.black,
+                  context: context,
+                  shape: RoundedRectangleBorder(
+                    borderRadius:
+                        BorderRadius.vertical(top: Radius.circular(20)),
+                  ),
+                  builder: (context) => Container(
+                    height: 250,
+                    child: Column(
+                      children: [
+                        SizedBox(
+                          height: 20,
+                        ),
+                        Text(
+                          "Select Quantity",
+                          style: TextStyle(color: Colors.white),
+                        ),
+                        SizedBox(
+                          height: 20,
+                        ),
+                        SizedBox(
+                          width: 300,
+                          child: ElevatedButton(
+                              style: ButtonStyle(
+                                backgroundColor:
+                                    MaterialStateProperty.all(Colors.grey),
+                                textStyle: MaterialStateProperty.all(
+                                  TextStyle(fontSize: 12),
+                                ),
+                              ),
+                              onPressed: () {
+                                Navigator.pop(context);
+                              },
+                              child: Text('8Kg  |   599')),
+                        ),
+                        SizedBox(
+                          width: 300,
+                          child: ElevatedButton(
+                              style: ButtonStyle(
+                                backgroundColor:
+                                    MaterialStateProperty.all(Colors.grey),
+                                textStyle: MaterialStateProperty.all(
+                                  TextStyle(fontSize: 12),
+                                ),
+                              ),
+                              onPressed: () {
+                                Navigator.pop(context);
+                              },
+                              child: Text('2Kg  |   299')),
+                        ),
+                        SizedBox(
+                          width: 300,
+                          child: ElevatedButton(
+                              style: ButtonStyle(
+                                backgroundColor:
+                                    MaterialStateProperty.all(////////
+                                        Colors.grey),
+                                textStyle: MaterialStateProperty.all(
+                                  TextStyle(fontSize: 12),
+                                ),
+                              ),
+                              onPressed: () {
+                                Navigator.pop(context);
+                              },
+                              child: Text('1Kg   |   99')),
+                        ),
+                      ],
+                    ),
+                  ),
+                );
               },
               child: Text('Add to cart'),
             )

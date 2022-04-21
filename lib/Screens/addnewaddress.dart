@@ -80,6 +80,16 @@ class _AddNewState extends State<AddNew> {
             "Add New Address",
             style: TextStyle(color: Colors.black),
           ),
+          actions: [
+            IconButton(
+                onPressed: () {
+                  print('Saved');
+                },
+                icon: Icon(
+                  Icons.save_as,
+                  color: Colors.black,
+                )),
+          ],
         ),
         body: Padding(
             padding: EdgeInsets.all(12),

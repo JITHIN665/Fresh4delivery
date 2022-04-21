@@ -28,7 +28,6 @@ class Order extends StatelessWidget {
             body: Padding(
           padding: const EdgeInsets.all(20.0),
           child: Container(
-            
             width: double.infinity,
             child: ListView.builder(
                 itemCount: 5,
@@ -54,7 +53,6 @@ class ord extends StatelessWidget {
     return Padding(
       padding: EdgeInsets.symmetric(horizontal: 5, vertical: 5),
       child: Container(
-        
         decoration: BoxDecoration(
           color: Colors.grey.shade200,
           borderRadius: BorderRadius.circular(15),
