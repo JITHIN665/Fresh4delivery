@@ -529,15 +529,40 @@ class Body extends StatelessWidget {
               ),
             ),
           ),
+          SizedBox(
+            height: 10,
+          ),
 
-          Row(
-            children: [
-              Image.asset(
-                "assets/images/Frame 4.jpg",
-                width: 390,
-              )
-            ],
-          )
+          CarouselSlider(
+            options: CarouselOptions(
+              viewportFraction: 1,
+              height: 180.0,
+              autoPlay: true,
+            ),
+            items: [
+              "assets/images/Frame 2.jpg",
+              "assets/images/Frame 4.jpg",
+            ].map((i) {
+              return Builder(
+                builder: (BuildContext context) {
+                  return Container(
+                      child: Image.asset(
+                    i.toString(),
+                    fit: BoxFit.fill,
+                  ));
+                },
+              );
+            }).toList(),
+          ),
+
+          // Row(
+          //   children: [
+          //     Image.asset(
+          //       "assets/images/Frame 4.jpg",
+          //       width: MediaQuery.of(context).size.width,
+          //     )
+          //   ],
+          // )
         ],
       ),
     );
