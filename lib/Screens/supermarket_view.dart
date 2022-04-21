@@ -165,7 +165,7 @@ class SuperMarketView extends StatelessWidget {
                     height: MediaQuery.of(context).size.height - 300,
                     child: TabBarView(children: [
                       SingleChildScrollView(
-                        physics: BouncingScrollPhysics(),
+                        physics: NeverScrollableScrollPhysics(),
                         child: Column(
                           children: [
                             Card(),

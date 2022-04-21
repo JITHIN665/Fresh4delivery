@@ -265,6 +265,7 @@ class Body extends StatelessWidget {
           Padding(
             padding: const EdgeInsets.all(10),
             child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 Stack(
                   children: [
@@ -323,9 +324,9 @@ class Body extends StatelessWidget {
                   ],
                 ),
 
-                SizedBox(
-                  width: 10,
-                ),
+                // SizedBox(
+                //   width: 10,
+                // ),
 
                 Stack(
                   children: [
