@@ -41,6 +41,14 @@ class ManageAdress extends StatelessWidget {
             padding: const EdgeInsets.all(8.0),
             child: Column(
               children: [
+                Container(
+                  width: 300,
+                  decoration: BoxDecoration(
+                    border: Border.all(width: 1, color: Colors.grey.shade300),
+                    borderRadius: BorderRadius.circular(10),
+                  ),
+                  child: Text('data'),
+                ),
                 ElevatedButton(
                     style: ButtonStyle(
                         shape:

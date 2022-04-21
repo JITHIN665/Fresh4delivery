@@ -249,10 +249,10 @@ class Body extends StatelessWidget {
             }).toList(),
           ),
           SizedBox(
-            height: 5,
+            height: 10,
           ),
           SizedBox(
-            height: 100,
+            height: 90,
             child: ListView.builder(
               shrinkWrap: true,
               itemCount: 15,

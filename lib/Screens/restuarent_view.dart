@@ -41,9 +41,10 @@ class RestuarentView extends StatelessWidget {
             Stack(
               children: [
                 Container(
+                  height: 210,
                   // height: MediaQuery.of(context).size.height,
-                  height: MediaQuery.of(context).size.height * 0.25,
-                  width: MediaQuery.of(context).size.width,
+                  // height: MediaQuery.of(context).size.height * 0.25,
+                  // width: MediaQuery.of(context).size.width,
                   decoration: BoxDecoration(
                     image: DecorationImage(
                       image: AssetImage('assets/images/r2.jpg'),
@@ -174,7 +175,6 @@ class RestuarentView extends StatelessWidget {
                         physics: BouncingScrollPhysics(),
                         child: Column(
                           children: [
-                            Card(),
                             Card(),
                             Card(),
                             Card(),
