@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:fresh4delivery/Screens/login.dart';
 import 'package:fresh4delivery/Screens/manageaddress.dart';
+import 'package:fresh4delivery/Screens/notification.dart';
 import 'package:fresh4delivery/Screens/reset_pass.dart';
 
 class Account extends StatelessWidget {
@@ -54,7 +55,12 @@ class Account extends StatelessWidget {
                   iconColor: Colors.grey,
                   title: Text('notifications'),
                   onTap: () {
-                    print('clicked');
+                    // print('clicked');
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => NotificationScreen()),
+                    );
                   },
                 ),
                 Divider(),

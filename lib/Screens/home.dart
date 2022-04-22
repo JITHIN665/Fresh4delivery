@@ -112,20 +112,60 @@ class _HomeState extends State<Home> {
                   )
                 ],
                 bottom: (PreferredSize(
-                  preferredSize: Size.fromHeight(60),
-                  child: Padding(
-                    padding: const EdgeInsets.all(15.0),
-                    child: TextFormField(
-                      decoration: InputDecoration(
-                          hintText: "Search for  Restaurant, Supermarkets",
-                          prefixIcon: Icon(Icons.search),
-                          border: OutlineInputBorder(
-                              borderRadius: BorderRadius.circular(10),
-                              borderSide: BorderSide.none),
-                          contentPadding: EdgeInsets.zero,
-                          filled: true,
-                          fillColor: Colors.grey.shade300),
-                    ),
+                  preferredSize: Size.fromHeight(90),
+                  child: Column(
+                    children: [
+                      Padding(
+                        padding: const EdgeInsets.all(15.0),
+                        child: TextFormField(
+                          decoration: InputDecoration(
+                              hintText: "Search for  Restaurant, Supermarkets",
+                              prefixIcon: Icon(Icons.search),
+                              border: OutlineInputBorder(
+                                  borderRadius: BorderRadius.circular(10),
+                                  borderSide: BorderSide.none),
+                              contentPadding: EdgeInsets.zero,
+                              filled: true,
+                              fillColor: Colors.grey.shade300),
+                        ),
+                      ),
+                      Container(
+                        width: double.infinity,
+                        height: 30,
+                        color: Color.fromARGB(255, 166, 206, 57),
+                        child: Row(
+                          children: [
+                            TextButton(
+                                onPressed: () {
+                                  showModalBottomSheet(
+                                      context: context,
+                                      shape: RoundedRectangleBorder(
+                                        borderRadius: BorderRadius.vertical(
+                                            top: Radius.circular(20)),
+                                      ),
+                                      builder: (context) => Container(
+                                            child: Column(
+                                                children: [Text('Deliver To')]),
+                                          ));
+                                },
+                                child: Text(
+                                  'Delivery To :',
+                                  style: TextStyle(color: Colors.black),
+                                )),
+                            // TextButton.icon(
+                            //     onPressed: () {},
+                            //     icon: Icon(
+                            //       Icons.location_on_outlined,
+                            //       size: 5,
+                            //     ),
+                            //     label: Text(
+                            //       'Delivery To:',
+                            //       style: TextStyle(fontSize: 10),
+                            //     )),
+                          ],
+                        ),
+                      )
+                    ],
                   ),
                 )),
               ),
