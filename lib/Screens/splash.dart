@@ -54,3 +54,4 @@ class _ScreenSplashState extends State<ScreenSplash> {
     });
   }
 }
+
