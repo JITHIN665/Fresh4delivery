@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:fresh4delivery/Screens/splash.dart';
+import 'package:fresh4delivery/Screens/Authentication/splash.dart';
 
 void main() {
   runApp(const MyApp());
